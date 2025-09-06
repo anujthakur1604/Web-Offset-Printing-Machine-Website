@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goga Graphics Company</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="{{ url_for('index') }}" class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Goga Graphics Company Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Home -->
+<section id="home" class="home">
+    <div class="container">
+        <h1>Welcome to Goga Graphics Company</h1>
+        <p>Your trusted partner for precision printing machines.</p>
+    </div>
+</section>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Goga Graphics Company: Precision in Every Print</h1>
+            <p>Leading the future of web offset printing with advanced technology and unmatched quality.</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Goga Graphics Company</h2>
+            <p>
+                Founded on a commitment to innovation, Goga Graphics Company has become a trusted name 
+                in the manufacturing of web offset printing machines. Our mission is to provide 
+                cutting-edge solutions that empower businesses to achieve superior print quality and 
+                operational efficiency. We believe in building lasting relationships with our clients 
+                through reliable machinery and dedicated support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+<!-- Contact -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p><strong>Mobile:</strong> <a href="tel:+919873715354">+91 9873715354</a></p>
+            <p><strong>Mobile:</strong> <a href="tel:+919873715335">+91 9873715335</a></p>
+            <p><strong>Email:</strong> <a href="mailto:gogagraphics0001@gmail.com">gogagraphics0001@gmail.com</a></p>
+            <p><strong>Address:</strong> Dabua Pali Road, Near Shiva DharmKanta & Ganga Ram Mandir, NIT Faridabad - 121001</p>
+        </div>
+        <p><strong>For Any Queries Contact Here </strong> <p>
+
+        <!-- Contact Form -->
+        <form action="/contact" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="mobile" placeholder="Your Mobile Number" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+    </div>
+</section>

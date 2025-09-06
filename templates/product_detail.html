@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ product.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .product-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+    .product-detail img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product-info {
+      flex: 1;
+    }
+    .product-info h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #243555;
+    }
+    .product-info p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .product-info strong {
+      color: #000;   /* black headings */
+      font-size: 18px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #243555;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-detail">
+    <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+    
+    <div class="product-info">
+      <h1>{{ product.name }}</h1>
+      <p>{{ product.desc }}</p>
+
+      <p><strong>Descriptions:</strong> {{ product.details.description }}</p>
+
+
+      <a href="{{ url_for('products') }}" class="back-link">← Back to Products</a>
+    </div>
+  </div>
+</body>
+</html>

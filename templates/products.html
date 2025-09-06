@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Goga Graphics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Goga Graphics Company Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                    <li><a href="{{ url_for('index') }}#about">About Us</a></li>
+                    <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="products">
+            <div class="container">
+                <h2>Our Web Offset Machines</h2>
+                <div class="product-grid">
+                    {% for machine in machines %}
+                    <div class="product-card">
+                        <img src="{{ url_for('static', filename=machine.image) }}" alt="{{ machine.name }}">
+                        <h3>{{ machine.name }}</h3>
+                        <p>{{ machine.desc }}</p>
+                        <a href="{{ url_for('product_detail', product_id=machine.id) }}" class="btn">See More Info</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Goga Graphics Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
