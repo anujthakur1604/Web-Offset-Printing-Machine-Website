@@ -65,7 +65,7 @@ products_data = [
         "id": 6,
         "name": "3C Satellite Unit",
         "desc": "Advanced satellite printing unit.",
-        "image": "3C Satellite unit.png",
+        "image": "3CSatelliteUnit.png",
         "details": {
             "description": " A 3-Color (3C) Satellite Unit is a specialized printing unit used in web offset presses, particularly in newspaper and commercial printing. Its main purpose is to add three colors to one side of the paper web. It also Provides high-quality, efficient multi-color printing for newspapers. "
         }
