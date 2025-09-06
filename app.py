@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 from flask_mail import Mail, Message
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
 # ----------------- MAIL CONFIG -----------------
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
